@@ -3,7 +3,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Signup = ({ openSignUpModal, setopenSignUpModal }) => {
+const Signup = ({ openSignUpModal}) => {
   const [mobile, setMobileNumber] = useState("");
   const [inputDate, setInputDate] = useState("");
 
@@ -65,19 +65,20 @@ const Signup = ({ openSignUpModal, setopenSignUpModal }) => {
   // Get the modal
 
   // When the user clicks anywhere outside of the modal, close it
-      const modal = document.getElementById('myModal');
+    //   const modal = document.getElementById('myModal');
 
-     let elementId = document.getElementById('root');
-     elementId.addEventListener('click', function(event) {
-       //console.log(event);
-       console.log(modal);
-     //  elementId.setAttribute("style", "display:none;");
-       if(modal!=null)
-       {
-       modal.style.display = "none";
-       }
+    //  let elementId = document.getElementById('root');
+    //  elementId.addEventListener('click', function(event) {
+    //    //console.log(event);
+    //    console.log(modal);
+    //  //  elementId.setAttribute("style", "display:none;");
+    //    if(modal!=null)
+    //    {
+    //    modal.style.display = "none";
 
-      });
+    //    }
+
+    //   });
 
 
 //   window.onclick = function(event) {
@@ -90,7 +91,7 @@ const Signup = ({ openSignUpModal, setopenSignUpModal }) => {
 
   return (
     <div
-      style={{ opacity: openSignUpModal ? 1 : 0 }}
+      style={{ display: openSignUpModal ? "block" : "none" }}
       id="myModal"
       className="modal"
     >
@@ -133,7 +134,7 @@ const Signup = ({ openSignUpModal, setopenSignUpModal }) => {
               onChange={handleDate}
             />
 
-            <button class="submit-button" type="submit">
+            <button className="submit-button" type="submit">
               Submit
             </button>
           </div>
