@@ -3,7 +3,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Signup = ({ openSignUpModal}) => {
+const Signup = () => {
   const [mobile, setMobileNumber] = useState("");
   const [inputDate, setInputDate] = useState("");
 
@@ -91,7 +91,7 @@ const Signup = ({ openSignUpModal}) => {
 
   return (
     <div
-      style={{ display: openSignUpModal ? "block" : "none" }}
+      //style={{ display: openSignUpModal ? "block" : "none" }}
       id="myModal"
       className="modal"
     >

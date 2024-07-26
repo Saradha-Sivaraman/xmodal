@@ -10,14 +10,14 @@ function App() {
       <h1 align="center"> User Detail Modal</h1>
       
 
-      <button
+      <button type="button"
         className="main-btn"
         onClick={() => setopenSignUpModal((prev) => (prev = !prev))}
       >Open Form</button>
-      <Signup
-        openSignUpModal={openSignUpModal}
+      {openSignUpModal?(<Signup
+       
         
-      />
+      />):""}
     </div>
   );
 }
