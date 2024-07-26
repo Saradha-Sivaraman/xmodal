@@ -65,13 +65,28 @@ const Signup = ({ openSignUpModal, setopenSignUpModal }) => {
   // Get the modal
 
   // When the user clicks anywhere outside of the modal, close it
-  //    var modal = document.getElementById('myModal');
+      const modal = document.getElementById('myModal');
 
-  // window.onclick = function(event) {
-  //    if (event.currentTarget.id === modal) {
-  //     modal.style.display = "none";
-  //    }
-  //  }
+     let elementId = document.getElementById('root');
+     elementId.addEventListener('click', function(event) {
+       //console.log(event);
+       console.log(modal);
+     //  elementId.setAttribute("style", "display:none;");
+       if(modal!=null)
+       {
+       modal.style.display = "none";
+       }
+
+      });
+
+
+//   window.onclick = function(event) {
+//     console.log(event);
+//      if (event.currentTarget.id === "root") {
+       
+//        modal.style.display = "none";
+//       }
+//     }
 
   return (
     <div
