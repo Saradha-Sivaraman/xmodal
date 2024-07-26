@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Signup from './Signup.js';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [openSignUpModal, setopenSignUpModal] = useState(false)
+    return (
+        <div>
+            <h1 align="center"> User Detail Modal</h1>
+            <Signup openSignUpModal={openSignUpModal}
+                setopenSignUpModal={setopenSignUpModal} />
+                
+            <button className='main-btn' 
+                onClick={() => setopenSignUpModal(true)}>
+              Open Form
+            </button>
+        </div>
+    );
 }
 
 export default App;
